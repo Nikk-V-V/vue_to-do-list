@@ -57,7 +57,7 @@
           isCheck() {
               this.ready = 0
               localStorage.setItem('tasks', JSON.stringify(this.tasks))
-              this.tasks.forEach((value, index) => {
+              this.tasks.forEach((value) => {
                   if (value.isDone === true) this.ready++
               })
           },
@@ -88,11 +88,15 @@
           },
           deleteTasks(item) {
               let arr = []
+
               arr = this.tasks.filter(x => x.id !== item.id)
-              console.log(arr)
+
               localStorage.setItem('tasks', JSON.stringify(arr))
+
               this.quantity = this.tasks.length
+
               this.getTasks()
+
               this.ready--
           }
       },
