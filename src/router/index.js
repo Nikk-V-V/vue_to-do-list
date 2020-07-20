@@ -7,6 +7,12 @@ Vue.use(VueRouter)
   const routes = [
     {
       path: '/',
+      name: 'previwe',
+      meta: {layout: "preview"},
+      component: () => import('../views/Preview')
+    },
+    {
+      path: '/toDo',
       name: 'toDo',
       meta: {layout: "main"},
       component: () => import('../views/ToDo')

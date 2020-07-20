@@ -9,6 +9,7 @@
 <script>
 
   import MainLayout from "./layouts/MainLayout";
+  import PreviewLayout from "./layouts/PreviewLayout"
 
   export default {
       computed: {
@@ -16,10 +17,12 @@
               let layout = this.$route.meta.layout
 
               if (layout) return layout + '-layout'
+
           }
       },
       components: {
-          MainLayout
+          MainLayout,
+          PreviewLayout
       }
   }
 </script>
@@ -29,7 +32,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    outline: none;
   }
+
+  
+
   body {
     font-family: Roboto, sans-serif;
   }

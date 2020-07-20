@@ -8,7 +8,6 @@
         <router-view />
       </div>
     </main>
-
   </div>
 </template>
 
@@ -16,7 +15,7 @@
   import Header from "../components/app/Header";
 
   export default {
-      name: "MainLayout",
+      name: "main-layout",
       components: {Header}
   }
 
